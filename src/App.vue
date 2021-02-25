@@ -9,9 +9,9 @@
         </mdb-navbar-brand>
         <mdb-navbar-toggler>
           <mdb-navbar-nav right>
-            <mdb-nav-item href="#" active>Home</mdb-nav-item>
+            <mdb-nav-item href="#">Home</mdb-nav-item>
             <mdb-nav-item href="#">Features</mdb-nav-item>
-            <mdb-nav-item href="best-features" class="downloadbtn">Download</mdb-nav-item>
+            <mdb-nav-item href="#" class="downloadbtn">Download</mdb-nav-item>
           </mdb-navbar-nav>
         </mdb-navbar-toggler>
       </mdb-navbar>
@@ -580,8 +580,29 @@ export default {
   color: #2c3e50!important;
   font-weight: 800px;
   border: 1px solid rgba(212, 220, 224, 0.5);
-  box-shadow: 0 0 5px rgba(65, 64, 64, 0.5);
-    
+  box-shadow: 0 0 5px rgba(65, 64, 64, 0.5);   
+}
+
+.downloadbtn:active {
+  padding-left: 5px;
+  padding-right: 5px;
+  background: rgb(238, 41, 41);
+  border-radius: 5px;
+  color: #2c3e50!important;
+  font-weight: 800px;
+  border: 1px solid rgba(212, 220, 224, 0.5);
+  box-shadow: 0 0 5px rgba(65, 64, 64, 0.5);   
+}
+
+.downloadbtn:hover {
+  padding-left: 5px;
+  padding-right: 5px;
+  background: rgb(238, 113, 113);
+  border-radius: 5px;
+  color: #2c3e50!important;
+  font-weight: 800px;
+  border: 1px solid rgba(212, 220, 224, 0.5);
+  box-shadow: 0 0 5px rgba(65, 64, 64, 0.5);   
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -596,8 +617,17 @@ export default {
     color: rgba(255, 255, 255, 0.9);
 }
 
-.navbar .navbar-light .breadcrumb .nav-item .nav-link, .navbar:not(.top-nav-collapse).navbar-light .navbar-nav .nav-item .nav-link {
+.navbar .navbar-light .breadcrumb .nav-item .nav-link, .navbar:not(.top-nav-collapse).navbar-light .navbar-nav .nav-item .nav-link:hover {
   color:white;
+  -webkit-transition: .35s;
+  transition: .35s;
+  font-weight: 300;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar .navbar-light .breadcrumb .nav-item .nav-link, .navbar:not(.top-nav-collapse).navbar-light .navbar-nav .nav-item .nav-link {
+  color:rgb(243, 239, 239);
   -webkit-transition: .35s;
   transition: .35s;
   font-weight: 300;
@@ -613,6 +643,12 @@ export default {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.ripple {
+  display:none !important;
+  color:rgb(75, 74, 74);
+}
+
 /* 
 .navbar.navbar-light .nav-item .nav-link:hover { 
   color: #CC0000!important; 
