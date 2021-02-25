@@ -586,7 +586,7 @@ export default {
 .downloadbtn:active {
   padding-left: 5px;
   padding-right: 5px;
-  background: rgb(238, 41, 41);
+  background: rgb(209, 54, 54);
   border-radius: 5px;
   color: #2c3e50!important;
   font-weight: 800px;
@@ -597,12 +597,12 @@ export default {
 .downloadbtn:hover {
   padding-left: 5px;
   padding-right: 5px;
-  background: rgb(238, 113, 113);
+  background: rgb(236, 96, 96);
   border-radius: 5px;
   color: #2c3e50!important;
   font-weight: 800px;
   border: 1px solid rgba(212, 220, 224, 0.5);
-  box-shadow: 0 0 5px rgba(65, 64, 64, 0.5);   
+  box-shadow: 0 0 0px rgba(65, 64, 64, 0.5);   
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -610,29 +610,33 @@ export default {
 }
 
 .navbar {
+  padding: 50px!important;
   box-shadow: none !important;
 }
 
 .navbar-light:not(.top-nav-collapse) .navbar-brand {
     color: rgba(255, 255, 255, 0.9);
 }
+.navbar-light:is(.top-nav-collapse){
+   padding: 20px!important;
+}
 
 .navbar .navbar-light .breadcrumb .nav-item .nav-link, .navbar:not(.top-nav-collapse).navbar-light .navbar-nav .nav-item .nav-link:hover {
-  color:white;
+  color:rgb(199, 197, 197);
   -webkit-transition: .35s;
   transition: .35s;
-  font-weight: 300;
-  padding-left: 15px;
-  padding-right: 15px;
+  font-weight: 590;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .navbar .navbar-light .breadcrumb .nav-item .nav-link, .navbar:not(.top-nav-collapse).navbar-light .navbar-nav .nav-item .nav-link {
-  color:rgb(243, 239, 239);
+  color: white;
   -webkit-transition: .35s;
   transition: .35s;
-  font-weight: 300;
-  padding-left: 15px;
-  padding-right: 15px;
+  font-weight: 590;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .navbar .navbar-light .breadcrumb .nav-item .nav-link, .navbar:is(.top-nav-collapse).navbar-light .navbar-nav .nav-item .nav-link {
@@ -693,13 +697,29 @@ export default {
     -webkit-transition: .35s;
     transition: .35s;
     font-weight: 500;
+    padding: 5px!important;
+    padding-left: 5px!important;
+    padding-right: 5px!important;
   }
 
   .navbar .navbar-light .breadcrumb .nav-item .nav-link, .navbar:not(.top-nav-collapse).navbar-light .navbar-nav .nav-item .nav-link {
-    color: #2c3e50;
+    color: #2c3e50!important;
     -webkit-transition: .35s;
     transition: .35s;
-    font-weight: 500;
+    font-weight: 590;
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+    padding: 5px!important;
+  }
+
+  .navbar .navbar-light .breadcrumb .nav-item .nav-link, .navbar:is(.top-nav-collapse).navbar-light .navbar-nav .nav-item .nav-link {
+    color:rgb(75, 74, 74);
+    -webkit-transition: .35s;
+    transition: .35s;
+    font-weight: 700;
+    padding-left: 1px!important;
+    padding-right: 1px!important;
+    padding: 5px!important;
   }
 
   .navbar-light:not(.top-nav-collapse) .navbar-brand {
@@ -707,6 +727,9 @@ export default {
     -webkit-transition: .35s;
     transition: .35s;
     font-weight: 500;
+    padding: 1px!important;
+    padding-left: 0px!important;
+    padding-right: 0px!important;
   }
 }
 </style>
