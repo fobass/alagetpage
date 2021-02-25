@@ -580,7 +580,7 @@ export default {
   color: #2c3e50!important;
   font-weight: 800px;
   border: 1px solid rgba(212, 220, 224, 0.5);
-  box-shadow: 0 0 5px rgba(31, 31, 31, 0.5);
+  box-shadow: 0 0 5px rgba(65, 64, 64, 0.5);
     
 }
 
@@ -630,6 +630,25 @@ export default {
   color: #ffffff!important; 
 }  */
 
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(250, 148, 148);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(248, 107, 107);
+}
 
 @media only screen and (max-width: 990px) {
   .navbar:not(.top-nav-collapse) {
