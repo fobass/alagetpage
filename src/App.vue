@@ -20,32 +20,18 @@
 
     <mdb-container class="con">
       <section id="gallery">
-        <!-- <h2 class="mb-5 font-weight-bold text-center">Gallery heading</h2> -->
-        <div class="row">
-          <div class="col-md-5">
-            <img
-              src="https://mdbootstrap.com/img/Photos/Others/images/48.jpg"
-              class="img-fluid"
-              alt=""
-            />
-          </div>
-          <div class="col-md-6">
-            <!-- <h4 class="mb-3"><strong>This is title of the news</strong></h4> -->
+        <div class="main-section">
+         <h2 class="h1-responsive font-weight-bold my-5 headertext">Next generation courier app </h2>
             <p>
-              Nam libero tempore, cum soluta nobis est eligendi optio cumque
-              nihil impedit quo minus id quod maxime placeat facere possimus,
-              omnis voluptas assumenda est, omnis dolor repellendus et aut
-              officiis debitis aut rerum.
+              Alaget helps you to find people near,
+              <br />
+              who are going to fly soon to different directions
             </p>
-
-            <p>
-              Nam libero tempore, cum soluta nobis est eligendi optio cumque
-              nihil impedit quo minus id quod maxime placeat facere possimus,
-              omnis voluptas assumenda est, omnis dolor repellendus et aut
-              officiis debitis aut rerum.
-            </p>
-            <a class="btn btn-primary btn-md">Learn more</a>
-          </div>
+            <li class="list-inline-item">
+              <div class="btn-learn-more">
+                <a href="#learn-more" class="nav-link">GET STARTED TODAY</a>
+              </div>
+            </li>
         </div>
       </section>
 
@@ -163,15 +149,55 @@ export default {
 </script>
 
 <style>
-.con{
-  background: tomato;
-  padding-top: 300px;
-  
+.main-section {
+  text-align: left;
+  color: white;
 }
 
-#gallery{
-  background: forestgreen;
+.btn-learn-more {
+  font-family: "Roboto Condensed", Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+  font-size: 15px !important;
+  background-color: tomato !important;
+  border: 1px solid #b6744e;
+  font-weight: bold !important;
+  border-radius: 50px;
+  /* margin-bottom: 22px; */
+  margin-top: 20px;
+  color: white;
+  padding: 10px;
+}
 
+.btn-learn-more > a {
+  color: white !important;
+}
+
+.btn-learn-more:hover {
+  background-color: rgb(251, 108, 82) !important;
+  border-color: #804d1e;
+}
+
+.headertext {
+ 
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 115%;
+  letter-spacing: -0.06em;
+  margin-bottom: 24px;
+}
+
+.con {
+  /* background: tomato; */
+  padding-top: 250px;
+}
+
+/* #gallery{
+  background: forestgreen;
+} */
+::selection {
+  color: #2c3e50;
+  background-color: #f5a794;
 }
 
 #app {
@@ -181,7 +207,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   /* margin-top: 80px; */
-  background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")no-repeat center center;
+  /* background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")no-repeat center center; */
+  
+  background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("ttps://mdbootstrap.com/img/Photos/Others/img (40).jpg");
+  background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("ttps://mdbootstrap.com/img/Photos/Others/img (40).jpg"); /* The least supported option. */
+
+
   background-size: cover;
   height: 100vh;
 }
@@ -287,7 +318,7 @@ export default {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 4px;
 }
 
 /* Track */
@@ -306,25 +337,42 @@ export default {
 }
 
 @media only screen and (max-width: 990px) {
-  .navbar:not(.top-nav-collapse) {
-    background: white!important;
-    color: #2c3e50!important;
+
+  .main-section {
+    text-align: center!important;
+  }
+
+  .navbar {
+    /* background:transparent!important; */
+    /* color: #e1e2e4!important; */
     -webkit-transition: .35s;
     transition: .35s;
     font-weight: 500;
-    padding: 5px!important;
+    padding: 15px!important;
     padding-left: 5px!important;
     padding-right: 5px!important;
   }
 
-  .navbar .navbar-light .breadcrumb .nav-item .nav-link, .navbar:not(.top-nav-collapse).navbar-light .navbar-nav .nav-item .nav-link {
+  .navbar:not(.top-nav-collapse) {
+    background:transparent!important;
+    /* color: #e1e2e4!important; */
+    -webkit-transition: .35s;
+    transition: .35s;
+    font-weight: 500;
+    padding: 15px!important;
+    padding-left: 5px!important;
+    padding-right: 5px!important;
+  }
+
+  .navbar .navbar-light .breadcrumb .nav-item .nav-link, .navbar:not(.top-nav-collapse).navbar-light .navbar-nav .nav-item:not(.downloadbtn) .nav-link {
     color: #2c3e50!important;
+    background: #f1f1f1;
     -webkit-transition: .35s;
     transition: .35s;
     font-weight: 590;
-    padding-left: 20px!important;
-    padding-right: 20px!important;
-    padding: 5px!important;
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+    padding: 10px!important;
   }
 
   .navbar .navbar-light .breadcrumb .nav-item .nav-link, .navbar:is(.top-nav-collapse).navbar-light .navbar-nav .nav-item .nav-link {
@@ -332,19 +380,54 @@ export default {
     -webkit-transition: .35s;
     transition: .35s;
     font-weight: 700;
-    padding-left: 1px!important;
-    padding-right: 1px!important;
-    padding: 5px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    padding: 10px!important;
   }
 
   .navbar-light:not(.top-nav-collapse) .navbar-brand {
-    color: rgba(0,0,0,.9)!important;
+    color: white!important;
     -webkit-transition: .35s;
     transition: .35s;
     font-weight: 500;
-    padding: 1px!important;
+    padding: 10px!important;
     padding-left: 0px!important;
     padding-right: 0px!important;
   }
+
+  .con {
+    padding-top: 100px;
+  }
+
+  .headertext {
+    color: white;
+    font-size: 42px;
+  }
+
+  /* .navbar .navbar-light .breadcrumb .nav-item .nav-link, .navbar:not(.top-nav-collapse).navbar-light .navbar-nav .nav-item:is(.downloadbtn) .nav-link {
+    padding-left: 5px;
+    padding-right: 5px;
+    background: tomato!important;
+    border-radius: 5px;
+    color: #2c3e50!important;
+    font-weight: 800px;
+    border: 1px solid rgba(212, 220, 224, 0.5);
+    box-shadow: 0 0 5px rgba(65, 64, 64, 0.5);   
+  } */
+
+  /* .navbar-toggler{
+    color: white!important;
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  .navbar-toggler-icon {
+    color: white!important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  } */
+
+  /* .navbar-toggler {
+    border-color: rgb(255,102,203);
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }  */
 }
 </style>
